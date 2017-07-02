@@ -1,0 +1,114 @@
+/** Custom Select **/
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+	width: 100%;
+	select {
+		display: none;
+	}
+}
+.custom-select {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+.custom-select-trigger {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0 84px 0 22px;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 60px;
+	background: #f4845d;
+	cursor: pointer;
+	&:after {
+		position: absolute;
+		width: 0;
+		height: 0;
+		content: '';
+		top: 50%;
+		right: 25px;
+		margin-top: -3px;
+		border-style: solid;
+		border-width: 5px 5px 0 5px;
+		border-color: #fff transparent transparent transparent;
+	}
+}
+.custom-select.opened {
+	.custom-select-trigger {
+		&:after {
+			margin-top: 3px;
+			transform: rotate(-180deg) translateY(100%);
+		}
+	}
+	.custom-options {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+}
+.custom-options {
+	position: absolute;
+	display: block;
+	top: 100%;
+	left: 0;
+	right: 0;
+	min-width: 100%;
+	margin: 15px 0;
+	border: 1px solid #b5b5b5;
+	box-sizing: border-box;
+	box-shadow: 0 2px 1px rgba(0,0,0,.07);
+	background: #fff;
+	transition: all .4s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+	&:before {
+		position: absolute;
+		display: block;
+		content: '';
+		bottom: 100%;
+		right: 25px;
+		width: 7px;
+		height: 7px;
+		margin-bottom: -4px;
+		border-top: 1px solid #b5b5b5;
+		border-left: 1px solid #b5b5b5;
+		background: #fff;
+		transform: rotate(45deg);
+		transition: all .4s ease-in-out;
+	}
+}
+.option-hover {
+	&:before {
+		background: #f9f9f9;
+	}
+}
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 0 22px;
+	border-bottom: 1px solid #b5b5b5;
+	text-transform: uppercase;
+	color: #b5b5b5;
+	line-height: 47px;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+	&:first-of-type {
+		border-radius: 4px 4px 0 0;
+	}
+	&:last-of-type {
+		border-bottom: 0;
+		border-radius: 0 0 4px 4px;
+	}
+	&:hover {
+		background: #f9f9f9;
+	}
+}
+.custom-option.selection {
+	background: #f9f9f9;
+}

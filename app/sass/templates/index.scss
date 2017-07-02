@@ -1,0 +1,23 @@
+.main {
+    font-family: PoiretOne, sans-serif;
+
+    &__title {
+        margin-bottom: 10px;
+
+        h1 {
+            font-size: 3em;
+            line-height: 1em;
+            font-weight: 400;
+        }
+    }
+
+    &__slogan {
+
+        h3 {
+            font-size: 1.25em;
+            font-weight: 400;
+        }
+
+    }
+
+}

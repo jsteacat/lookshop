@@ -1,0 +1,34 @@
+.product {
+    margin: 10px 0;
+
+    &__image {
+        background-color: #fff;
+        text-align: center;
+        padding: 10px 10px 0;
+    }
+
+    &__info {
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+
+    &__title,
+    &__price {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        margin: 0 auto;
+
+        &:hover {
+
+        }
+
+        .fa {
+            margin-left: 10px;
+        }
+    }
+
+}

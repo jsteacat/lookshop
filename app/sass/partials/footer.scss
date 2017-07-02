@@ -1,0 +1,20 @@
+.footer {
+    background-color: #000;
+    padding: 20px;
+
+    &__wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .hamburger {
+            float: none;
+        }
+    }
+
+    &__copyright {
+        color: #b5b5b5;
+        text-align: right;
+        line-height: 1.2;
+    }
+}
